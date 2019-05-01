@@ -1,0 +1,3155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OpenSimDocument Version="30000">
+	<Model name="Index6">
+		<defaults>
+			<Millard2012AccelerationMuscle name="default">
+				<!--The set of points defining the path of the muscle.-->
+				<GeometryPath>
+					<!--All properties of this object have their default values.-->
+				</GeometryPath>
+			</Millard2012AccelerationMuscle>
+		</defaults>
+		<length_units>meters</length_units>
+		<force_units>N</force_units>
+		<!--Acceleration due to gravity.-->
+		<gravity> 0 -9.80665 0</gravity>
+		<!--Bodies in the model.-->
+		<BodySet>
+			<objects>
+				<Body name="ground">
+					<mass>0</mass>
+					<mass_center> 0 0 0</mass_center>
+					<inertia_xx>0</inertia_xx>
+					<inertia_yy>0</inertia_yy>
+					<inertia_zz>0</inertia_zz>
+					<inertia_xy>0</inertia_xy>
+					<inertia_xz>0</inertia_xz>
+					<inertia_yz>0</inertia_yz>
+					<!--Joint that connects this body with the parent body.-->
+					<Joint />
+				</Body>
+				<Body name="secondmc">
+					<mass>0.008834</mass>
+					<mass_center> 0 -0.050924 0</mass_center>
+					<inertia_xx>8e-006</inertia_xx>
+					<inertia_yy>1e-006</inertia_yy>
+					<inertia_zz>-8e-006</inertia_zz>
+					<inertia_xy>0</inertia_xy>
+					<inertia_xz>0</inertia_xz>
+					<inertia_yz>0</inertia_yz>
+					<!--Joint that connects this body with the parent body.-->
+					<Joint>
+						<CustomJoint name="ground_secondmc">
+							<!--Name of the parent body to which this joint connects its owner body.-->
+							<parent_body>ground</parent_body>
+							<!--Location of the joint in the parent body specified in the parent reference frame. Default is (0,0,0).-->
+							<location_in_parent>0 0 0</location_in_parent>
+							<!--Orientation of the joint in the parent body specified in the parent reference frame. Euler XYZ body-fixed rotation angles are used to express the orientation. Default is (0,0,0).-->
+							<orientation_in_parent>-1.5707 0.15 1.4</orientation_in_parent>
+							<!--Location of the joint in the child body specified in the child reference frame. For SIMM models, this vector is always the zero vector (i.e., the body reference frame coincides with the joint). -->
+							<location>0 0 0</location>
+							<!--Orientation of the joint in the owing body specified in the owning body reference frame.  Euler XYZ body-fixed rotation angles are used to express the orientation. -->
+							<orientation>0 0 0</orientation>
+							<!--Set holding the generalized coordinates (q's) that parmeterize this joint.-->
+							<CoordinateSet>
+								<objects>
+									<Coordinate name="secondmc_rx">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>rotational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0.523598775598299</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-3.140000005741 3.140000005741</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+									<Coordinate name="secondmc_rz">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>rotational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>-0.383972435438752</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-3.140000005741 3.140000005741</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+									<Coordinate name="secondmc_ry">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>rotational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>4.3982294782174e-006</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-3.140000005741 3.140000005741</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+									<Coordinate name="secondmc_tx">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>translational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-5 5</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+									<Coordinate name="secondmc_ty">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>translational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-1 2</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+									<Coordinate name="secondmc_tz">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>translational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-3 3</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+								</objects>
+							</CoordinateSet>
+							<!--Whether the joint transform defines parent->child or child->parent.-->
+							<reverse>false</reverse>
+							<!--Defines how the child body moves with respect to the parent as a function of the generalized coordinates.-->
+							<SpatialTransform>
+								<!--3 Axes for rotations are listed first.-->
+								<TransformAxis name="rotation1">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>secondmc_rx</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>1 0 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation2">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>secondmc_rz</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 1 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation3">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>secondmc_ry</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 0 1</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<!--3 Axes for translations are listed next.-->
+								<TransformAxis name="translation1">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>secondmc_tx</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>1 0 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation2">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>secondmc_ty</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 1 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation3">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>secondmc_tz</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 0 1</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+							</SpatialTransform>
+						</CustomJoint>
+					</Joint>
+					<VisibleObject>
+						<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+						<GeometrySet>
+							<objects>
+								<DisplayGeometry>
+									<!--Name of geometry file .vtp, .stl, .obj-->
+									<geometry_file>2mc.vtp</geometry_file>
+									<!--Color used to display the geometry when visible-->
+									<color> 1 1 1</color>
+									<!--Name of texture file .jpg, .bmp-->
+									<texture_file />
+									<!--in body transform specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+									<transform> -0 0 -0 0 0 0</transform>
+									<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+									<scale_factors> 1 1 1</scale_factors>
+									<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+									<display_preference>4</display_preference>
+									<!--Display opacity between 0.0 and 1.0-->
+									<opacity>1</opacity>
+								</DisplayGeometry>
+							</objects>
+							<groups />
+						</GeometrySet>
+						<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+						<scale_factors> 1 1 1</scale_factors>
+					</VisibleObject>
+					<WrapObjectSet>
+						<objects>
+							<WrapEllipsoid name="_2MCP_profundus">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> 0.91909 -1.41599 1.63433</xyz_body_rotation>
+								<translation> 0.0057 -0.0297 0</translation>
+								<active>true</active>
+								<quadrant>-x</quadrant>
+								<dimensions> 0.007 0.007 0.03</dimensions>
+							</WrapEllipsoid>
+							<WrapEllipsoid name="_2MCP_superficialis">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> 0.91909 -1.41599 1.63433</xyz_body_rotation>
+								<translation> 0.0057 -0.0297 0</translation>
+								<active>true</active>
+								<quadrant>-x</quadrant>
+								<dimensions> 0.008 0.008 0.03</dimensions>
+							</WrapEllipsoid>
+						</objects>
+					</WrapObjectSet>
+				</Body>
+				<Body name="2proxph">
+					<mass>0.00467294985677034</mass>
+					<mass_center> 0 -0.0202534 0</mass_center>
+					<inertia_xx>1.05240064673528e-006</inertia_xx>
+					<inertia_yy>5.50943749398752e-007</inertia_yy>
+					<inertia_zz>-1.05240064673528e-006</inertia_zz>
+					<inertia_xy>0</inertia_xy>
+					<inertia_xz>0</inertia_xz>
+					<inertia_yz>0</inertia_yz>
+					<!--Joint that connects this body with the parent body.-->
+					<Joint>
+						<CustomJoint name="2MCP">
+							<!--Name of the parent body to which this joint connects its owner body.-->
+							<parent_body>secondmc</parent_body>
+							<!--Location of the joint in the parent body specified in the parent reference frame. Default is (0,0,0).-->
+							<location_in_parent>0.003501 -0.028243 0.00362</location_in_parent>
+							<!--Orientation of the joint in the parent body specified in the parent reference frame. Euler XYZ body-fixed rotation angles are used to express the orientation. Default is (0,0,0).-->
+							<orientation_in_parent>0 0 0</orientation_in_parent>
+							<!--Location of the joint in the child body specified in the child reference frame. For SIMM models, this vector is always the zero vector (i.e., the body reference frame coincides with the joint). -->
+							<location>0 0 0</location>
+							<!--Orientation of the joint in the owing body specified in the owning body reference frame.  Euler XYZ body-fixed rotation angles are used to express the orientation. -->
+							<orientation>0 0 0</orientation>
+							<!--Set holding the generalized coordinates (q's) that parmeterize this joint.-->
+							<CoordinateSet>
+								<objects>
+									<Coordinate name="2MCP_flexion">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>rotational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-0.872664625997 1.570796326795</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+									<Coordinate name="2MCP_abduction">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>rotational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-0.261799387799 0.261799387799</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+								</objects>
+							</CoordinateSet>
+							<!--Whether the joint transform defines parent->child or child->parent.-->
+							<reverse>false</reverse>
+							<!--Defines how the child body moves with respect to the parent as a function of the generalized coordinates.-->
+							<SpatialTransform>
+								<!--3 Axes for rotations are listed first.-->
+								<TransformAxis name="rotation1">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>2MCP_flexion</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0.997506148585 -0.039496005883 0.058494008713</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation2">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>2MCP_abduction</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>-0.054998980079 0.085898968886 0.994784639676</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation3">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>-0.044314993312 -0.995520849758 0.083512987396</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<!--3 Axes for translations are listed next.-->
+								<TransformAxis name="translation1">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>1 0 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation2">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 1 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation3">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 0 1</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+							</SpatialTransform>
+						</CustomJoint>
+					</Joint>
+					<VisibleObject>
+						<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+						<GeometrySet>
+							<objects>
+								<DisplayGeometry>
+									<!--Name of geometry file .vtp, .stl, .obj-->
+									<geometry_file>2proxph.vtp</geometry_file>
+									<!--Color used to display the geometry when visible-->
+									<color> 1 1 1</color>
+									<!--Name of texture file .jpg, .bmp-->
+									<texture_file />
+									<!--in body transform specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+									<transform> -0 0 -0 0 0 0</transform>
+									<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+									<scale_factors> 1 1 1</scale_factors>
+									<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+									<display_preference>4</display_preference>
+									<!--Display opacity between 0.0 and 1.0-->
+									<opacity>1</opacity>
+								</DisplayGeometry>
+							</objects>
+							<groups />
+						</GeometrySet>
+						<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+						<scale_factors> 1 1 1</scale_factors>
+					</VisibleObject>
+					<WrapObjectSet>
+						<objects>
+							<WrapEllipsoid name="MCP2_Extension">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> 0.947016 -1.41546 0.281347</xyz_body_rotation>
+								<translation> 0.0028 -0.0004 0.0025</translation>
+								<active>true</active>
+								<dimensions> 0.0084 0.006 0.036</dimensions>
+							</WrapEllipsoid>
+							<WrapTorus name="MCP2_Extension_FPI">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> -1.5708 -0 1.5708</xyz_body_rotation>
+								<translation> -0.0074 -0.0024 -0.0084</translation>
+								<active>true</active>
+								<quadrant>-x</quadrant>
+								<inner_radius>0.0036</inner_radius>
+								<outer_radius>0.006</outer_radius>
+							</WrapTorus>
+							<WrapTorus name="MCP2_Extension_FDI">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> 1.5708 0 1.5708</xyz_body_rotation>
+								<translation> 0.0096 -0.0024 -0.0073</translation>
+								<active>true</active>
+								<quadrant>x</quadrant>
+								<inner_radius>0.003</inner_radius>
+								<outer_radius>0.0054</outer_radius>
+							</WrapTorus>
+							<WrapTorus name="MCP2_Extension_LUM">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> 1.5708 0 1.5708</xyz_body_rotation>
+								<translation> 0.0048 -0.0048 -0.0097</translation>
+								<active>true</active>
+								<quadrant>x</quadrant>
+								<inner_radius>0.0036</inner_radius>
+								<outer_radius>0.006</outer_radius>
+							</WrapTorus>
+						</objects>
+					</WrapObjectSet>
+				</Body>
+				<Body name="2midph">
+					<mass>0.00122689663027594</mass>
+					<mass_center> 0 -0.0115986 0</mass_center>
+					<inertia_xx>1.03392704973571e-007</inertia_xx>
+					<inertia_yy>8.09275520899376e-008</inertia_yy>
+					<inertia_zz>-1.03392704973571e-007</inertia_zz>
+					<inertia_xy>0</inertia_xy>
+					<inertia_xz>0</inertia_xz>
+					<inertia_yz>0</inertia_yz>
+					<!--Joint that connects this body with the parent body.-->
+					<Joint>
+						<CustomJoint name="2PIP">
+							<!--Name of the parent body to which this joint connects its owner body.-->
+							<parent_body>2proxph</parent_body>
+							<!--Location of the joint in the parent body specified in the parent reference frame. Default is (0,0,0).-->
+							<location_in_parent>0.007517 -0.041273 0.007326</location_in_parent>
+							<!--Orientation of the joint in the parent body specified in the parent reference frame. Euler XYZ body-fixed rotation angles are used to express the orientation. Default is (0,0,0).-->
+							<orientation_in_parent>0 0 0</orientation_in_parent>
+							<!--Location of the joint in the child body specified in the child reference frame. For SIMM models, this vector is always the zero vector (i.e., the body reference frame coincides with the joint). -->
+							<location>0 0 0</location>
+							<!--Orientation of the joint in the owing body specified in the owning body reference frame.  Euler XYZ body-fixed rotation angles are used to express the orientation. -->
+							<orientation>0 0 0</orientation>
+							<!--Set holding the generalized coordinates (q's) that parmeterize this joint.-->
+							<CoordinateSet>
+								<objects>
+									<Coordinate name="2PIP_flexion">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>rotational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-0.0872664626 2.094395102393</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+								</objects>
+							</CoordinateSet>
+							<!--Whether the joint transform defines parent->child or child->parent.-->
+							<reverse>false</reverse>
+							<!--Defines how the child body moves with respect to the parent as a function of the generalized coordinates.-->
+							<SpatialTransform>
+								<!--3 Axes for rotations are listed first.-->
+								<TransformAxis name="rotation1">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>2PIP_flexion</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0.960344918522 0.040997996522 -0.275783976602</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation2">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 1 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation3">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0.276016042971 0 0.96115302841</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<!--3 Axes for translations are listed next.-->
+								<TransformAxis name="translation1">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>1 0 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation2">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 1 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation3">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 0 1</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+							</SpatialTransform>
+						</CustomJoint>
+					</Joint>
+					<VisibleObject>
+						<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+						<GeometrySet>
+							<objects>
+								<DisplayGeometry>
+									<!--Name of geometry file .vtp, .stl, .obj-->
+									<geometry_file>2midph.vtp</geometry_file>
+									<!--Color used to display the geometry when visible-->
+									<color> 1 1 1</color>
+									<!--Name of texture file .jpg, .bmp-->
+									<texture_file />
+									<!--in body transform specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+									<transform> -0 0 -0 0 0 0</transform>
+									<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+									<scale_factors> 1 1 1</scale_factors>
+									<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+									<display_preference>4</display_preference>
+									<!--Display opacity between 0.0 and 1.0-->
+									<opacity>1</opacity>
+								</DisplayGeometry>
+							</objects>
+							<groups />
+						</GeometrySet>
+						<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+						<scale_factors> 1 1 1</scale_factors>
+					</VisibleObject>
+					<WrapObjectSet>
+						<objects>
+							<WrapTorus name="PIP2_Extension">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> -1.5708 0 0.349066</xyz_body_rotation>
+								<translation> 0.0019 0.0007 0.0073</translation>
+								<active>true</active>
+								<quadrant>y</quadrant>
+								<inner_radius>0.003</inner_radius>
+								<outer_radius>0.0048</outer_radius>
+							</WrapTorus>
+							<WrapTorus name="PIP2_Extension_UB">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> -1.20428 -0 1.91986</xyz_body_rotation>
+								<translation> -0.0084 -0.0053 0.0074</translation>
+								<active>true</active>
+								<quadrant>x</quadrant>
+								<inner_radius>0.003</inner_radius>
+								<outer_radius>0.0048</outer_radius>
+							</WrapTorus>
+							<WrapTorus name="PIP2_Extension_RB">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> -1.51844 0 1.91986</xyz_body_rotation>
+								<translation> 0.0084 -0.004 0.0034</translation>
+								<active>true</active>
+								<quadrant>x</quadrant>
+								<inner_radius>0.003</inner_radius>
+								<outer_radius>0.0048</outer_radius>
+							</WrapTorus>
+						</objects>
+					</WrapObjectSet>
+				</Body>
+				<Body name="2distph">
+					<mass>0.00114113223106027</mass>
+					<mass_center> 0 0 0</mass_center>
+					<inertia_xx>2.27858244563189e-007</inertia_xx>
+					<inertia_yy>2.27858244563189e-007</inertia_yy>
+					<inertia_zz>-7.87778534223468e-008</inertia_zz>
+					<inertia_xy>0</inertia_xy>
+					<inertia_xz>0</inertia_xz>
+					<inertia_yz>0</inertia_yz>
+					<!--Joint that connects this body with the parent body.-->
+					<Joint>
+						<CustomJoint name="2DIP">
+							<!--Name of the parent body to which this joint connects its owner body.-->
+							<parent_body>2midph</parent_body>
+							<!--Location of the joint in the parent body specified in the parent reference frame. Default is (0,0,0).-->
+							<location_in_parent>0.003333 -0.024888 0.00122</location_in_parent>
+							<!--Orientation of the joint in the parent body specified in the parent reference frame. Euler XYZ body-fixed rotation angles are used to express the orientation. Default is (0,0,0).-->
+							<orientation_in_parent>0 0 0</orientation_in_parent>
+							<!--Location of the joint in the child body specified in the child reference frame. For SIMM models, this vector is always the zero vector (i.e., the body reference frame coincides with the joint). -->
+							<location>0 0 0</location>
+							<!--Orientation of the joint in the owing body specified in the owning body reference frame.  Euler XYZ body-fixed rotation angles are used to express the orientation. -->
+							<orientation>0 0 0</orientation>
+							<!--Set holding the generalized coordinates (q's) that parmeterize this joint.-->
+							<CoordinateSet>
+								<objects>
+									<Coordinate name="2DIP_flexion">
+										<!--Coordinate can describe rotational, translational, or coupled motion. Defaults to rotational.-->
+										<motion_type>rotational</motion_type>
+										<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+										<default_value>0</default_value>
+										<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+										<range>-0.349065850399 1.570796326795</range>
+										<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+										<clamped>true</clamped>
+										<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+										<locked>false</locked>
+										<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+										<prescribed>false</prescribed>
+									</Coordinate>
+								</objects>
+							</CoordinateSet>
+							<!--Whether the joint transform defines parent->child or child->parent.-->
+							<reverse>false</reverse>
+							<!--Defines how the child body moves with respect to the parent as a function of the generalized coordinates.-->
+							<SpatialTransform>
+								<!--3 Axes for rotations are listed first.-->
+								<TransformAxis name="rotation1">
+									<!--Names of the coordinates that serve as the independent variables         of the transform function.-->
+									<coordinates>2DIP_flexion</coordinates>
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0.978977305152 0.076906023972 -0.188915058886</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<LinearFunction>
+											<coefficients> 1 0</coefficients>
+										</LinearFunction>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation2">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 1 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="rotation3">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0.189476221888 0 0.981885309667</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<!--3 Axes for translations are listed next.-->
+								<TransformAxis name="translation1">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>1 0 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation2">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 1 0</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+								<TransformAxis name="translation3">
+									<!--Rotation or translation axis for the transform.-->
+									<axis>0 0 1</axis>
+									<!--Transform function of the generalized coordinates used to        represent the amount of transformation along a specified axis.-->
+									<function>
+										<Constant>
+											<value>0</value>
+										</Constant>
+									</function>
+								</TransformAxis>
+							</SpatialTransform>
+						</CustomJoint>
+					</Joint>
+					<VisibleObject>
+						<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+						<GeometrySet>
+							<objects>
+								<DisplayGeometry>
+									<!--Name of geometry file .vtp, .stl, .obj-->
+									<geometry_file>2distph.vtp</geometry_file>
+									<!--Color used to display the geometry when visible-->
+									<color> 1 1 1</color>
+									<!--Name of texture file .jpg, .bmp-->
+									<texture_file />
+									<!--in body transform specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+									<transform> -0 0 -0 0 0 0</transform>
+									<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+									<scale_factors> 1 1 1</scale_factors>
+									<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+									<display_preference>4</display_preference>
+									<!--Display opacity between 0.0 and 1.0-->
+									<opacity>1</opacity>
+								</DisplayGeometry>
+							</objects>
+							<groups />
+						</GeometrySet>
+						<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+						<scale_factors> 1 1 1</scale_factors>
+					</VisibleObject>
+					<WrapObjectSet>
+						<objects>
+							<WrapTorus name="DIP2_Extension">
+								<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded-->
+								<display_preference>0</display_preference>
+								<xyz_body_rotation> 1.5708 0.0872665 -0</xyz_body_rotation>
+								<translation> 0 -0.0002 0.0056</translation>
+								<active>true</active>
+								<quadrant>-y</quadrant>
+								<inner_radius>0.003</inner_radius>
+								<outer_radius>0.0048</outer_radius>
+							</WrapTorus>
+						</objects>
+					</WrapObjectSet>
+				</Body>
+			</objects>
+		</BodySet>
+		<!--Constraints in the model.-->
+		<ConstraintSet>
+			<objects />
+		</ConstraintSet>
+		<!--Forces in the model.-->
+		<ForceSet>
+			<objects>
+				<Millard2012AccelerationMuscle name="FDSI">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="FDSI-P1">
+									<location> -0.04384 0.27799 -0.05373</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDSI-P2">
+									<location> -0.01523 0.10844 -0.02684</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDSI-P3">
+									<location> -0.00579 0.02396 -0.0189</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDSI-P4">
+									<location> -0.00146 0.00481 -0.00946</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDSI-P5">
+									<location> 0.00294 -0.02059 -0.0107</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDSI-P6">
+									<location> 0.0054 -0.03117 -0.00153</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<MovingPathPoint name="FDSI-P7">
+									<body>2midph</body>
+									<x_location>
+										<Constant>
+											<value>0.00122</value>
+										</Constant>
+									</x_location>
+									<x_coordinate>2PIP_flexion</x_coordinate>
+									<y_location>
+										<SimmSpline>
+											<x> -0.0872665 0.676315 1.33423 1.58701 1.94156</x>
+											<y> -0.007533 -0.007587 -0.008196 -0.008744 -0.010949</y>
+										</SimmSpline>
+									</y_location>
+									<y_coordinate>2PIP_flexion</y_coordinate>
+									<z_location>
+										<SimmSpline>
+											<x> 0.039054 0.87359 1.21938 1.55556 1.87254</x>
+											<y> -0.006591 -0.006507 -0.006168 -0.005274 -0.00447</y>
+										</SimmSpline>
+									</z_location>
+									<z_coordinate>2PIP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<PathPoint name="FDSI-P8">
+									<location> 0.00258 -0.02023 -0.00072</location>
+									<body>2midph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>_2MCP_superficialis</wrap_object>
+									<method>hybrid</method>
+									<range> 5 6</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>61.24</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0835</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.2734</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.10471975512</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="FDPI">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="FDPI-P1">
+									<location> -0.04355 0.27442 -0.04956</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDPI-P2">
+									<location> -0.01588 0.10907 -0.02321</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDPI-P3">
+									<location> -0.00573 0.02594 -0.01715</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDPI-P4">
+									<location> -0.0012 0.00486 -0.00836</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDPI-P5">
+									<location> 0.00281 -0.02058 -0.00921</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FDPI-P6">
+									<location> 0.0054 -0.03143 -0.00223</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<MovingPathPoint name="FDPI-P7">
+									<body>2midph</body>
+									<x_location>
+										<Constant>
+											<value>0.00124</value>
+										</Constant>
+									</x_location>
+									<x_coordinate>2PIP_flexion</x_coordinate>
+									<y_location>
+										<SimmSpline>
+											<x> 0.000201324 0.530839 1.40018 1.82921 2.16791</x>
+											<y> -0.009101 -0.008878 -0.009164 -0.009897 -0.011839</y>
+										</SimmSpline>
+									</y_location>
+									<y_coordinate>2PIP_flexion</y_coordinate>
+									<z_location>
+										<SimmSpline>
+											<x> -0.0183551 0.529577 1.20977 1.94664</x>
+											<y> -0.006062 -0.006083 -0.005651 -0.003616</y>
+										</SimmSpline>
+									</z_location>
+									<z_coordinate>2PIP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<PathPoint name="FDPI-P8">
+									<location> 0.00244 -0.0188 -0.00689</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="FDPI-P9">
+									<location> 0.00094 -0.00532 -0.00136</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>_2MCP_profundus</wrap_object>
+									<method>hybrid</method>
+									<range> 5 6</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>68.27</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0749</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.2912</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.12217304764</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="EDCI">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="EDCI-P1">
+									<location> -0.04253 0.3076 -0.02137</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI-P2">
+									<location> -0.0344 0.25549 -0.01753</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI-P3">
+									<location> -0.02135 0.07153 0.0096</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI-P4">
+									<location> 0.002 -0.025 0.013</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI-P5">
+									<location> 0.00145 -0.01057 0.00897</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EDCI-P6">
+									<location> 0.00771 -0.037 0.0118</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EDCI-P7">
+									<location> 0.00109 -0.00885 0.00282</location>
+									<body>2midph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension</wrap_object>
+									<method>hybrid</method>
+									<range> 4 5</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension</wrap_object>
+									<range> 6 7</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>6.09</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.07</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.316594689</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.05235987756</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="EIP">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="EIP-P1">
+									<location> -0.04102 0.13966 -0.01554</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP-P2">
+									<location> -0.03537 0.13149 -0.01187</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP-P3">
+									<location> -0.02592 0.06684 0.00428</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP-P4">
+									<location> -0.01081 0.01528 0.00681</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP-P5">
+									<location> 0.0013 -0.0252 0.013</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP-P6">
+									<location> 0.0014 -0.0106 0.009</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EIP-P7">
+									<location> 0.00771 -0.037 0.0118</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EIP-P8">
+									<location> 0.00109 -0.00885 0.00282</location>
+									<body>2midph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension</wrap_object>
+									<method>hybrid</method>
+									<range> 5 6</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension</wrap_object>
+									<range> 7 8</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>10.85</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0589</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.161787624</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.10471975512</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="EIP_U">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="EIP_U-P1">
+									<location> -0.04102 0.13966 -0.01554</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P2">
+									<location> -0.03537 0.13149 -0.01187</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P3">
+									<location> -0.02592 0.06684 0.00428</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P4">
+									<location> -0.01081 0.01528 0.00681</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P5">
+									<location> 0.0013 -0.0252 0.013</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P6">
+									<location> 0.0014 -0.0106 0.009</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P7">
+									<location> 0.00069 -0.0415 0.0127</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P8">
+									<location> -0.0051 -0.0094 0.004</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P9">
+									<location> 0.0026 -0.0196 0.0036</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EIP_U-P10">
+									<location> 0.0003 -0.0037 0.0023</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension</wrap_object>
+									<method>hybrid</method>
+									<range> 5 6</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_UB</wrap_object>
+									<range> 7 8</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 9 10</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>10.85</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0589</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.182610524</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.10471975512</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="EIP_R">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="EIP_R-P1">
+									<location> -0.04102 0.13966 -0.01554</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P2">
+									<location> -0.03537 0.13149 -0.01187</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P3">
+									<location> -0.02592 0.06684 0.00428</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P4">
+									<location> -0.01081 0.01528 0.00681</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P5">
+									<location> 0.0013 -0.0252 0.013</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P6">
+									<location> 0.0014 -0.0106 0.009</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P7">
+									<location> 0.01267 -0.04045 0.00868</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P8">
+									<location> 0.00654 -0.00824 0.00153</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P9">
+									<location> 0.0026 -0.0196 0.0036</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EIP_R-P10">
+									<location> 0.0003 -0.0037 0.0023</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension</wrap_object>
+									<method>hybrid</method>
+									<range> 5 6</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_RB</wrap_object>
+									<range> 7 8</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 9 10</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>10.85</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0589</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.182501894</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.10471975512</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="FPI_C">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="FPI_C-P1">
+									<location> -0.00316 0.0003 -0.00018</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FPI_C-P2">
+									<location> -0.00336 -0.02107 -0.0017</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FPI_C-P3">
+									<location> -0.005 -0.01183 0.00015</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FPI_C-P4">
+									<location> -0.0014 -0.0244 0.0065</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FPI_C-P5">
+									<location> 0.00771 -0.037 0.0118</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FPI_C-P6">
+									<location> 0.00109 -0.00885 0.00282</location>
+									<body>2midph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension_FPI</wrap_object>
+									<range> 2 3</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension</wrap_object>
+									<range> 5 6</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>16.88</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.03056</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.05379163</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.129154364648</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="FPI_T">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="FPI_T-P1">
+									<location> -0.00316 0.0003 -0.00018</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FPI_T-P2">
+									<location> -0.00336 -0.02107 -0.0017</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="FPI_T-P3">
+									<location> -0.005 -0.01183 0.00015</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FPI_T-P4">
+									<location> 0.00069 -0.0415 0.0127</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FPI_T-P5">
+									<location> -0.0051 -0.0094 0.004</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="FPI_T-P6">
+									<location> 0.0026 -0.0196 0.0036</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="FPI_T-P7">
+									<location> 0.0003 -0.0037 0.0023</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension_FPI</wrap_object>
+									<range> 2 3</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_UB</wrap_object>
+									<range> 4 5</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 6 7</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>16.88</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0306</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.07262454</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.129154364648</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="LUM_C">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<MovingPathPoint name="LUM_C-P1">
+									<body>secondmc</body>
+									<x_location>
+										<Constant>
+											<value>-0.0012</value>
+										</Constant>
+									</x_location>
+									<x_coordinate>2MCP_flexion</x_coordinate>
+									<y_location>
+										<SimmSpline>
+											<x> -0.902568 0.00183719 1.82156</x>
+											<y> 0.008959 0.004897 0.001411</y>
+										</SimmSpline>
+									</y_location>
+									<y_coordinate>2MCP_flexion</y_coordinate>
+									<z_location>
+										<Constant>
+											<value>-0.0084</value>
+										</Constant>
+									</z_location>
+									<z_coordinate>2MCP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<MovingPathPoint name="LUM_C-P2">
+									<body>secondmc</body>
+									<x_location>
+										<SimmSpline>
+											<x> -0.808639 0.113257 1.60585</x>
+											<y> 0.007832 0.008116 0.012957</y>
+										</SimmSpline>
+									</x_location>
+									<x_coordinate>2MCP_flexion</x_coordinate>
+									<y_location>
+										<Constant>
+											<value>-0.01728</value>
+										</Constant>
+									</y_location>
+									<y_coordinate>2MCP_flexion</y_coordinate>
+									<z_location>
+										<Constant>
+											<value>-0.0023</value>
+										</Constant>
+									</z_location>
+									<z_coordinate>2MCP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<PathPoint name="LUM_C-P3">
+									<location> 0.0065 -0.0093 -0.00315</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="LUM_C-P4">
+									<location> 0.0099 -0.02315 0.0049</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="LUM_C-P5">
+									<location> 0.00771 -0.037 0.0118</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="LUM_C-P6">
+									<location> 0.00109 -0.00885 0.00282</location>
+									<body>2midph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension_LUM</wrap_object>
+									<range> 2 3</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension</wrap_object>
+									<range> 5 6</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>2.48</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.06799</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.03025628</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.020943951024</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="LUM_T">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<MovingPathPoint name="LUM_T-P1">
+									<body>secondmc</body>
+									<x_location>
+										<Constant>
+											<value>-0.0012</value>
+										</Constant>
+									</x_location>
+									<x_coordinate>2MCP_flexion</x_coordinate>
+									<y_location>
+										<SimmSpline>
+											<x> -0.902568 0.00183719 1.82156</x>
+											<y> 0.008959 0.004897 0.001411</y>
+										</SimmSpline>
+									</y_location>
+									<y_coordinate>2MCP_flexion</y_coordinate>
+									<z_location>
+										<Constant>
+											<value>-0.0084</value>
+										</Constant>
+									</z_location>
+									<z_coordinate>2MCP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<MovingPathPoint name="LUM_T-P2">
+									<body>secondmc</body>
+									<x_location>
+										<SimmSpline>
+											<x> -0.808639 0.113257 1.60585</x>
+											<y> 0.007832 0.008116 0.012957</y>
+										</SimmSpline>
+									</x_location>
+									<x_coordinate>2MCP_flexion</x_coordinate>
+									<y_location>
+										<Constant>
+											<value>-0.01728</value>
+										</Constant>
+									</y_location>
+									<y_coordinate>2MCP_flexion</y_coordinate>
+									<z_location>
+										<Constant>
+											<value>-0.0023</value>
+										</Constant>
+									</z_location>
+									<z_coordinate>2MCP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<PathPoint name="LUM_T-P3">
+									<location> 0.0065 -0.0093 -0.00315</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="LUM_T-P4">
+									<location> 0.01267 -0.04045 0.00868</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="LUM_T-P5">
+									<location> 0.00654 -0.00824 0.00153</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="LUM_T-P6">
+									<location> 0.0026 -0.0196 0.0036</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="LUM_T-P7">
+									<location> 0.0003 -0.0037 0.0023</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension_LUM</wrap_object>
+									<range> 2 3</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_RB</wrap_object>
+									<range> 4 5</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 6 7</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>2.48</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.06799</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.04885254</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.020943951024</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="EDCI_U">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="EDCI_U-P1">
+									<location> -0.04253 0.3076 -0.02137</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P2">
+									<location> -0.0344 0.25549 -0.01753</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P3">
+									<location> -0.02135 0.07153 0.0096</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P4">
+									<location> 0.00227 -0.0252 0.013</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P5">
+									<location> 0.00145 -0.01057 0.00897</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P6">
+									<location> 0.00069 -0.0415 0.0127</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P7">
+									<location> -0.0051 -0.0094 0.004</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P8">
+									<location> 0.0026 -0.0196 0.0036</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_U-P9">
+									<location> 0.0003 -0.0037 0.0023</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension</wrap_object>
+									<method>hybrid</method>
+									<range> 4 5</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_UB</wrap_object>
+									<range> 6 7</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 8 9</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>6.09</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.07</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.337928819</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.05235987756</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="EDCI_R">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="EDCI_R-P1">
+									<location> -0.04253 0.3076 -0.02137</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P2">
+									<location> -0.0344 0.25549 -0.01753</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P3">
+									<location> -0.02135 0.07153 0.0096</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P4">
+									<location> 0.00227 -0.0252 0.013</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P5">
+									<location> 0.00145 -0.01057 0.00897</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P6">
+									<location> 0.01267 -0.04045 0.00868</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P7">
+									<location> 0.00654 -0.00824 0.00153</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P8">
+									<location> 0.0026 -0.0196 0.0036</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="EDCI_R-P9">
+									<location> 0.0003 -0.0037 0.0023</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension</wrap_object>
+									<method>hybrid</method>
+									<range> 4 5</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_RB</wrap_object>
+									<range> 6 7</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 8 9</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>6.09</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.07</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.337777889</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.05235987756</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="FDI_2">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="FDI_2-P1">
+									<location> 0.0055 0.00018 -0.00056</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<MovingPathPoint name="FDI_2-P2">
+									<body>secondmc</body>
+									<x_location>
+										<SimmSpline>
+											<x> -0.808639 0.113257 1.60585</x>
+											<y> 0.007832 0.008116 0.012957</y>
+										</SimmSpline>
+									</x_location>
+									<x_coordinate>2MCP_flexion</x_coordinate>
+									<y_location>
+										<SimmSpline>
+											<x> -0.959931 -0.286733 -0.003922 1.62926</x>
+											<y> -0.017291 -0.017309 -0.017354 -0.021219</y>
+										</SimmSpline>
+									</y_location>
+									<y_coordinate>2MCP_flexion</y_coordinate>
+									<z_location>
+										<SimmSpline>
+											<x> -0.797865 -0.211933 0.0623332 1.39867</x>
+											<y> -0.002291 -0.002296 -0.002296 -0.000788</y>
+										</SimmSpline>
+									</z_location>
+									<z_coordinate>2MCP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<PathPoint name="FDI_2-P3">
+									<location> 0.00658 -0.0072 -0.0032</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FDI_2-P4">
+									<location> 0.01267 -0.04045 0.00868</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FDI_2-P5">
+									<location> 0.00654 -0.00824 0.00153</location>
+									<body>2midph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension_FDI</wrap_object>
+									<range> 2 3</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_RB</wrap_object>
+									<range> 4 5</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 5 5</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>33.75</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0389</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.064671188</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.160570291183</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+				<Millard2012AccelerationMuscle name="FDI_1">
+					<!--The set of points defining the path of the muscle.-->
+					<GeometryPath>
+						<!--The set of points defining the path-->
+						<PathPointSet>
+							<objects>
+								<PathPoint name="FDI_1-P1">
+									<location> 0.01011 0.02055 -0.01437</location>
+									<body>secondmc</body>
+								</PathPoint>
+								<MovingPathPoint name="FDI_1-P2">
+									<body>secondmc</body>
+									<x_location>
+										<SimmSpline>
+											<x> -0.808639 0.113257 1.60585</x>
+											<y> 0.007832 0.008116 0.012957</y>
+										</SimmSpline>
+									</x_location>
+									<x_coordinate>2MCP_flexion</x_coordinate>
+									<y_location>
+										<SimmSpline>
+											<x> -0.959931 -0.286733 -0.003922 1.62926</x>
+											<y> -0.017291 -0.017309 -0.017354 -0.021219</y>
+										</SimmSpline>
+									</y_location>
+									<y_coordinate>2MCP_flexion</y_coordinate>
+									<z_location>
+										<SimmSpline>
+											<x> -0.797865 -0.211933 0.0623332 1.39867</x>
+											<y> -0.002291 -0.002296 -0.002296 -0.000788</y>
+										</SimmSpline>
+									</z_location>
+									<z_coordinate>2MCP_flexion</z_coordinate>
+								</MovingPathPoint>
+								<PathPoint name="FDI_1-P3">
+									<location> 0.00658 -0.0072 -0.0032</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FDI_1-P4">
+									<location> 0.01267 -0.04045 0.00868</location>
+									<body>2proxph</body>
+								</PathPoint>
+								<PathPoint name="FDI_1-P5">
+									<location> 0.00654 -0.00824 0.00153</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="FDI_1-P6">
+									<location> 0.0026 -0.0196 0.0036</location>
+									<body>2midph</body>
+								</PathPoint>
+								<PathPoint name="FDI_1-P7">
+									<location> 0.0003 -0.0037 0.0023</location>
+									<body>2distph</body>
+								</PathPoint>
+							</objects>
+						</PathPointSet>
+						<!--The wrap objecs that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap>
+									<wrap_object>MCP2_Extension_FDI</wrap_object>
+									<range> 2 3</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>PIP2_Extension_RB</wrap_object>
+									<range> 4 5</range>
+								</PathWrap>
+								<PathWrap>
+									<wrap_object>DIP2_Extension</wrap_object>
+									<range> 6 7</range>
+								</PathWrap>
+							</objects>
+						</PathWrapSet>
+						<!--Used to display the path in the 3D window-->
+						<VisibleObject name="display">
+							<!--Set of geometry files and associated attributes, allow .vtp, .stl, .obj-->
+							<GeometrySet>
+								<objects />
+								<groups />
+							</GeometrySet>
+							<!--Three scale factors for display purposes: scaleX scaleY scaleZ-->
+							<scale_factors> 1 1 1</scale_factors>
+							<!--transform relative to owner specified as 3 rotations (rad) followed by 3 translations rX rY rZ tx ty tz-->
+							<transform> -0 0 -0 0 0 0</transform>
+							<!--Whether to show a coordinate frame-->
+							<show_axes>false</show_axes>
+							<!--Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for individual geometries-->
+							<display_preference>4</display_preference>
+						</VisibleObject>
+					</GeometryPath>
+					<!--Maximum isometric force that the fibers can generate-->
+					<max_isometric_force>33.75</max_isometric_force>
+					<!--Optimal length of the muscle fibers-->
+					<optimal_fiber_length>0.0389</optimal_fiber_length>
+					<!--Resting length of the tendon-->
+					<tendon_slack_length>0.085221368</tendon_slack_length>
+					<!--Angle between tendon and fibers at optimal fiber length expressed in radians-->
+					<pennation_angle_at_optimal>0.160570291183</pennation_angle_at_optimal>
+					<!--Maximum contraction velocity of the fibers, in optimal fiberlengths/second-->
+					<max_contraction_velocity>10</max_contraction_velocity>
+					<!--Compute muscle dynamics ignoring tendon compliance. Tendon is assumed to be rigid.-->
+					<ignore_tendon_compliance>true</ignore_tendon_compliance>
+					<!--assumed initial activation level if none is assigned.-->
+					<default_activation>0.02</default_activation>
+					<!--activation dynamics model with a lower bound-->
+					<MuscleFirstOrderActivationDynamicModel>
+						<!--Activation time constant in seconds-->
+						<activation_time_constant>0.01</activation_time_constant>
+						<!--Deactivation time constant in seconds-->
+						<deactivation_time_constant>0.04</deactivation_time_constant>
+						<!--Lower bound on activation-->
+						<minimum_activation>0</minimum_activation>
+					</MuscleFirstOrderActivationDynamicModel>
+					<!--active force length curve-->
+					<ActiveForceLengthCurve>
+						<!--Normalized fiber length where the steep ascending limb starts-->
+						<min_norm_active_fiber_length>0.4441</min_norm_active_fiber_length>
+						<!--Normalized fiber length where the steep ascending limb transitions to the shallow ascending limb-->
+						<transition_norm_fiber_length>0.73</transition_norm_fiber_length>
+						<!--Normalized fiber length where the descending limb ends-->
+						<max_norm_active_fiber_length>1.8123</max_norm_active_fiber_length>
+						<!--Slope of the shallow ascending limb-->
+						<shallow_ascending_slope>0.8616</shallow_ascending_slope>
+						<!--Minimum value of the active-force-length curve-->
+						<minimum_value>0</minimum_value>
+					</ActiveForceLengthCurve>
+					<!--force velocity curve-->
+					<ForceVelocityCurve>
+						<!--Curve slope at the maximum normalized concentric (shortening) velocity (normalized velocity of -1)-->
+						<concentric_slope_at_vmax>0</concentric_slope_at_vmax>
+						<!--Curve slope just before reaching concentric_slope_at_vmax-->
+						<concentric_slope_near_vmax>0.25</concentric_slope_near_vmax>
+						<!--Curve slope at isometric (normalized velocity of 0)-->
+						<isometric_slope>5</isometric_slope>
+						<!--Curve slope at the maximum normalized eccentric (lengthening) velocity (normalized velocity of 1)-->
+						<eccentric_slope_at_vmax>0</eccentric_slope_at_vmax>
+						<!--Curve slope just before reaching eccentric_slope_at_vmax-->
+						<eccentric_slope_near_vmax>0.15</eccentric_slope_near_vmax>
+						<!--Curve value at the maximum normalized eccentric contraction velocity-->
+						<max_eccentric_velocity_force_multiplier>1.4</max_eccentric_velocity_force_multiplier>
+						<!--Concentric curve shape, from linear (0) to maximal curve (1)-->
+						<concentric_curviness>0.6</concentric_curviness>
+						<!--Eccentric curve shape, from linear (0) to maximal curve (1)-->
+						<eccentric_curviness>0.9</eccentric_curviness>
+					</ForceVelocityCurve>
+					<!--fiber force length curve-->
+					<FiberForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberForceLengthCurve>
+					<!--Tendon force length curve-->
+					<TendonForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</TendonForceLengthCurve>
+					<!--fiber compressive force length curve-->
+					<FiberCompressiveForceLengthCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceLengthCurve>
+					<!--fiber compressive force cos(pennationAngle) curve-->
+					<FiberCompressiveForceCosPennationCurve>
+						<!--All properties of this object have their default values.-->
+					</FiberCompressiveForceCosPennationCurve>
+				</Millard2012AccelerationMuscle>
+			</objects>
+			<groups>
+				<ObjectGroup name="forearm">
+					<members> EDCI EDCI_R EDCI_U EIP EIP_R EIP_U FDPI FDSI</members>
+				</ObjectGroup>
+				<ObjectGroup name="radial">
+					<members> EDCI EDCI_R EDCI_U EIP EIP_R EIP_U FDPI FDSI</members>
+				</ObjectGroup>
+				<ObjectGroup name="flexor">
+					<members> FDPI FDSI</members>
+				</ObjectGroup>
+				<ObjectGroup name="hand">
+					<members> EDCI EDCI_R EDCI_U EIP EIP_R EIP_U FDPI FDSI</members>
+				</ObjectGroup>
+				<ObjectGroup name="Index">
+					<members> EDCI EDCI_R EDCI_U EIP EIP_R EIP_U FDI_1 FDI_2 FDPI FDSI FPI_C FPI_T LUM_C LUM_T</members>
+				</ObjectGroup>
+				<ObjectGroup name="extensor">
+					<members> EDCI EDCI_R EDCI_U EIP EIP_R EIP_U</members>
+				</ObjectGroup>
+			</groups>
+		</ForceSet>
+		<!--Markers in the model.-->
+		<MarkerSet>
+			<objects>
+				<Marker name="Tip">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2distph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00528743 -0.0247714 0.00335688</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="DIP">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2midph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00373395 -0.0267571 0.00626493</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="PIP">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2proxph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00867472 -0.0435435 0.0141022</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="MCP">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>secondmc</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00500563 -0.0310133 0.0133055</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Wrist">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>secondmc</body>
+					<!--Location of a marker on the body segment.-->
+					<location> -0.0115002 0.0500761 0.00697853</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="DT1">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2distph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00517497 -0.0169534 0.00717224</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="DT2">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2distph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00621186 -0.00693341 0.00695332</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="DT3">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2distph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> -0.00269352 -0.00741121 0.00765624</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="DT4">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2distph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> -0.0021204 -0.0149428 0.00927895</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="IT1">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2midph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.0078856 -0.023039 0.00825545</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="IT2">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2midph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.0080072 -0.0102813 0.00698703</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="IT3">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2midph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> -0.00225807 -0.0110167 0.00939453</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="IT4">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2midph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00410221 -0.0156925 0.015684</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="PT1">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2proxph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00817704 -0.0336374 0.0150833</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="PT2">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2proxph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.0102731 -0.0161604 0.00964884</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="PT3">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2proxph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00125119 -0.0166646 0.0133088</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="PT4">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>2proxph</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00795347 -0.022085 0.0201033</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="ML1">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>secondmc</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00580932 -0.00626373 0.0135728</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="ML2">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>secondmc</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.0096375 0.0135762 0.011799</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="ML3">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>secondmc</body>
+					<!--Location of a marker on the body segment.-->
+					<location> -0.00223616 0.00864386 0.0128805</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="ML4">
+					<!--Body segment in the model on which the marker resides.-->
+					<body>secondmc</body>
+					<!--Location of a marker on the body segment.-->
+					<location> 0.00674461 0.00525294 0.0179464</location>
+					<!--Flag (true or false) specifying whether or not a marker should be kept fixed in the marker placement step.  i.e. If false, the marker is allowed to move.-->
+					<fixed>false</fixed>
+				</Marker>
+			</objects>
+			<groups />
+		</MarkerSet>
+	</Model>
+</OpenSimDocument>

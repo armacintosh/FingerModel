@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OpenSimDocument Version="30000">
+	<ForceSet name="Index6_Actuators">
+		<defaults>
+			<CoordinateActuator name="default">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>true</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-infinity</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>infinity</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate></coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>1000</optimal_force>
+			</CoordinateActuator>
+		</defaults>
+		<objects>
+<!-- Reserve Motors to assist muscles -->
+<!--<!--beginning of coordinates that are affected by index finger muscles (excluding Elbow) -->
+			<CoordinateActuator name="2MCP_flexion_reserve">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>False</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-infinity</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>infinity</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate>2MCP_flexion</coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>2</optimal_force>
+			</CoordinateActuator>
+			<CoordinateActuator name="2MCP_abduction_reserve">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>False</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-infinity</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>infinity</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate>2MCP_abduction</coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>1</optimal_force>
+			</CoordinateActuator>
+			<CoordinateActuator name="2PIP_flexion_reserve">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>False</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-infinity</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>infinity</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate>2PIP_flexion</coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>1.5</optimal_force>
+			</CoordinateActuator>
+			<CoordinateActuator name="2DIP_flexion_reserve">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>False</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-infinity</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>infinity</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate>2DIP_flexion</coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>0.5</optimal_force>
+			</CoordinateActuator>
+<!--END OF coordinates that are affected by index finger muscles.-->
+<!--Start of others.-->
+			<CoordinateActuator name="secondmc_rx_reserve">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>false</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-0.1</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>0.1</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate>secondmc_rx</coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>100000</optimal_force>
+			</CoordinateActuator>
+			<CoordinateActuator name="secondmc_rz_reserve">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>false</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-0.1</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>0.1</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate>secondmc_rz</coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>100000</optimal_force>
+			</CoordinateActuator>
+			<CoordinateActuator name="secondmc_ry_reserve">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>false</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-0.1</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>0.1</max_control>
+				<!--Name of the generalized coordinate to which the actuator applies.-->
+				<coordinate>secondmc_ry</coordinate>
+				<!--The maximum generalized force produced by this actuator.-->
+				<optimal_force>100000</optimal_force>
+			</CoordinateActuator>
+			<PointActuator name="secondmc_tx_residual">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>false</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-0.1</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>0.1</max_control>
+				<!--Name of Body to which this actuator is applied.-->
+				<body>secondmc</body>
+				<!--Location of application point; in body frame unless point_is_global=true-->
+				<point>0 0 0</point>
+				<!--Interpret point in Ground frame if true; otherwise, body frame.-->
+				<point_is_global>false</point_is_global>
+				<!--Force application direction; in body frame unless force_is_global=true.-->
+				<direction>1 0 0</direction>
+				<!--Interpret direction in Ground frame if true; otherwise, body frame.-->
+				<force_is_global>true</force_is_global>
+				<!--The maximum force produced by this actuator when fully activated.-->
+				<optimal_force>100000</optimal_force>
+			</PointActuator>
+			<PointActuator name="secondmc_ty_residual">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>false</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-0.1</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>0.1</max_control>
+				<!--Name of Body to which this actuator is applied.-->
+				<body>secondmc</body>
+				<!--Location of application point; in body frame unless point_is_global=true-->
+				<point>0 0 0</point>
+				<!--Interpret point in Ground frame if true; otherwise, body frame.-->
+				<point_is_global>false</point_is_global>
+				<!--Force application direction; in body frame unless force_is_global=true.-->
+				<direction>0 1 0</direction>
+				<!--Interpret direction in Ground frame if true; otherwise, body frame.-->
+				<force_is_global>true</force_is_global>
+				<!--The maximum force produced by this actuator when fully activated.-->
+				<optimal_force>100000</optimal_force>
+			</PointActuator>
+			<PointActuator name="secondmc_tz_residual">
+				<!--Flag indicating whether the force is disabled or not. Disabled means that the force is not active in subsequent dynamics realizations.-->
+				<isDisabled>false</isDisabled>
+				<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+				<min_control>-0.1</min_control>
+				<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+				<max_control>0.1</max_control>
+				<!--Name of Body to which this actuator is applied.-->
+				<body>secondmc</body>
+				<!--Location of application point; in body frame unless point_is_global=true-->
+				<point>0 0 0</point>
+				<!--Interpret point in Ground frame if true; otherwise, body frame.-->
+				<point_is_global>false</point_is_global>
+				<!--Force application direction; in body frame unless force_is_global=true.-->
+				<direction>0 0 1</direction>
+				<!--Interpret direction in Ground frame if true; otherwise, body frame.-->
+				<force_is_global>true</force_is_global>
+				<!--The maximum force produced by this actuator when fully activated.-->
+				<optimal_force>100000</optimal_force>
+			</PointActuator>
+		</objects>
+		<groups />
+	</ForceSet>
+</OpenSimDocument>
